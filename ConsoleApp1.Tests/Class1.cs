@@ -69,25 +69,28 @@ namespace ConsoleApp1.Tests
         }
 
         //Throws<Exception>
-        [Fact]
-        public void height_human_less_null()
+        [Theory]
+        [InlineData(-6)]
+        [InlineData(0)]
+        [InlineData(231)]
+        public void height_human_less_null(int height)
         {
             Program program = new Program();
-            Assert.Throws<Exception>(() => program.height_human(-6));
+            Assert.Throws<Exception>(() => program.height_human(height));
         }
 
-        [Fact]
-        public void height_human_null()
-        {
-            Program program = new Program();
-            Assert.Throws<Exception>(() => program.height_Human(0));
-        }
+        //[Fact]
+        //public void height_human_null()
+        //{
+        //    Program program = new Program();
+        //    Assert.Throws<Exception>(() => program.height_Human(0));
+        //}
 
-        [Fact]
-        public void height_human_above_210sm()
-        {
-            Program program = new Program();
-            Assert.Throws<Exception>(() => program.heightHuman(231));
-        }
+        //[Fact]
+        //public void height_human_above_210sm()
+        //{
+        //    Program program = new Program();
+        //    Assert.Throws<Exception>(() => program.heightHuman(231));
+        //}
     }
 }

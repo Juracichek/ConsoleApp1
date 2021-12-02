@@ -55,25 +55,19 @@ namespace ConsoleApp1
             {
                 throw new Exception();
             }
-            return height;
-        }
 
-        public int height_Human(int height)
-        {
             if (height == 0)
             {
                 throw new Exception();
             }
-            return height;
-        }
-
-        public int heightHuman(int height)
-        {
             if (height > 210)
             {
                 throw new Exception();
             }
+
             return height;
         }
+
+        
     }
 }
